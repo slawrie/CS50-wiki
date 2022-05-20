@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block body %}
+    {% if title not in entries %}
+        The requested page was not found.
+        There is no entry matching "{{ title }}".
+    {% else %}
+        Error. The entry already exists.
+    {% endif %}
+{% endblock %}
